@@ -141,7 +141,8 @@ function Calc() {
             <select
               value={selectedSorting}
               onChange={(e) => setSelectedSorting(e.target.value)}
-              className="search border-2 border-[#CECECE] text-slate-200"
+              className="search border-2 border-[#CECECE] text-white text-opacity-50
+              "
             >
               <option value="Sort By" className="opt">Default</option>
               <option value="highestAPY" className="opt">Highest APY</option>
@@ -158,7 +159,8 @@ function Calc() {
               value={termLength}
               onChange={(e) => {
                 setTermLength(e.target.value);
-              }} className="search border-2 border-[#CECECE] text-slate-200"
+              }} className="search border-2 border-[#CECECE] text-white text-opacity-50
+              "
             >
 
               <option value="all" className="opt">Term Length</option>
@@ -366,7 +368,6 @@ function Calc() {
           </div>
           
         </div>
-        <img href=""/>
         </div>
       </div>
       
