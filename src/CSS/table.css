@@ -1,6 +1,7 @@
 .tableContainer{
-    width: 65%;
+    width: 75%;
     z-index: 100;
+    margin-left: 2vw;
 }
 
 .userForm{
@@ -21,9 +22,26 @@ th{
 }
 
 td{
+    margin-top: 6vh;
     text-align: center;
-    width: 10vw;
+    width: 11vw;
 }
+
+tr:not(:last-of-type){
+    height: 5vh;
+    border-width: 1px;
+}
+
+
+
+tr:hover {
+    background-color: rgba(123, 154, 109, 0.5);
+}
+
+.active-row {
+    background-color: rgba(123, 154, 109, 0.5);
+}
+
 
 .searchbank{
     border-radius: 2px soli
@@ -31,9 +49,9 @@ td{
 
 .calc{
     background-color: rgba(255,255,255,0.1);
-    width:25%;
+    width:45%;
     height: 70vh;
-    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 

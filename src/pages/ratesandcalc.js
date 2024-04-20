@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/table.css";
 
 function Calc() {
+  
   // Importing records data from JSON file
   const RatesList = require("../data/rates.json");
 
@@ -58,7 +59,7 @@ function Calc() {
 
   // amount of entries to be shown at once on table
   // this variable will change everything including displays and stuff
-  const blockSize = 20;
+  const blockSize = 13;
 
   // Sort the record list based on the input from the sort dropdown
   switch (selectedSorting) {
@@ -119,6 +120,7 @@ function Calc() {
   // display the page
   return (
     <div className="flex flex-col">
+      
       <div className="form text-black">
         <div className="flex flex-row justify-left userForm">
           {/* Displaying heading text */}
@@ -180,14 +182,11 @@ function Calc() {
           <table className="mb-10 table-auto">
             {/* Displaying table head with name for fields */}
             <thead>
-              <tr>
                 <th>Bank</th>
                 <th>Term Length</th>
                 <th>Min Deposit</th>
                 <th>APY</th>
                 <th>Bank Link</th>
-                <th>Calculator Link</th>
-              </tr>
             </thead>
             <tbody>
               {/* map the items in the Rates List to JSX Objects so they can be displayed */}
@@ -209,7 +208,21 @@ function Calc() {
               )
                 .slice(displayStart, displayStart + blockSize)
                 .map((item) => (
-                  <tr>
+                 
+                  <tr className="mt-10" onClick={() => {
+                    setCalcTerm(item.TermAmnt);
+                    setCalcTermType(item.TermType);
+                    setCalcDeposit(depositVal);
+                    setCalcAPY(item.apyNum);
+                    document.getElementById("calcTerm").value =
+                      item.TermAmnt;
+                    document.getElementById("calcTermType").innerText =
+                      item.TermType.charAt(0) +
+                      item.TermType.slice(1).toLowerCase();
+                    document.getElementById("calcDeposit").value =
+                      depositVal;
+                    document.getElementById("calcAPY").value = item.apyNum;
+                  }}>
                     <td className="w-1/4">{item.Bank != null ? item.Bank.toString() : "Null"}</td>
                     <td>
                       {item.TermAmnt != null ? item.TermAmnt.toString() : "Null"}{" "}
@@ -232,28 +245,7 @@ function Calc() {
                         Bank Site
                       </a>
                     </td>
-                    <td>
-                      {/* this on click function adds the current CD's values into the calculator */}
-                      {/* we may want to move this on click to a different element */}
-                      <a
-                        onClick={() => {
-                          setCalcTerm(item.TermAmnt);
-                          setCalcTermType(item.TermType);
-                          setCalcDeposit(depositVal);
-                          setCalcAPY(item.apyNum);
-                          document.getElementById("calcTerm").value =
-                            item.TermAmnt;
-                          document.getElementById("calcTermType").innerText =
-                            item.TermType.charAt(0) +
-                            item.TermType.slice(1).toLowerCase();
-                          document.getElementById("calcDeposit").value =
-                            depositVal;
-                          document.getElementById("calcAPY").value = item.apyNum;
-                        }}
-                      >
-                        Open In Calculator
-                      </a>
-                    </td>
+                    
                   </tr>
                 ))}
               {/* create a last row of the table with the buttons to click through the results */}
