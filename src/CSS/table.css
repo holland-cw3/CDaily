@@ -5,9 +5,7 @@
 }
 
 .userForm{
-    margin-left: 5vw;
     width: 100%;
-    z-index: 100;
     margin-top: 13vh;
 }
 
@@ -21,21 +19,31 @@ th{
     width: 10vw;
 }
 
+
 td{
     margin-top: 6vh;
     text-align: center;
     width: 11vw;
 }
 
+.bankName{
+    padding-left: 1vw;
+    text-align: left;
+}
+
 tr:not(:last-of-type){
-    height: 5vh;
+    height: 5.5vh;
     border-width: 1px;
 }
 
 
 
-tr:hover {
+tr:hover:not(:last-of-type) {
     background-color: rgba(123, 154, 109, 0.5);
+}
+
+tr:last-of-type {
+    height: 10vh;
 }
 
 .active-row {
@@ -43,15 +51,57 @@ tr:hover {
 }
 
 
-.searchbank{
-    border-radius: 2px soli
-}
+
 
 .calc{
     background-color: rgba(255,255,255,0.1);
     width:45%;
-    height: 70vh;
+    height: 55vh;
     margin-right: 3vw;
+    border-radius: 10px;
+    border: 1px solid white;
 }
 
+.next{
+    border-radius: 10px;
+    padding: .5vw;
+    border: 1px solid white;
+}
 
+.next-inactive{
+    color: grey;
+    border-radius: 10px;
+    padding: .5vw;
+    border: 1px solid grey;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 85%;
+    align-content: center ;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    
+}
+
+.bankSite{
+    width: 85%;
+    padding: 1vw;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+    background-color: rgba(123, 154, 109, .7);
+}
+
+.search{
+    background-color: rgba(0,0,0,0.1);
+    padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 15vw;
+    border-radius: 20px;
+    border-color: rgba(71, 71, 71, 0.);
+}

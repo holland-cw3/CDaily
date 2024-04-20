@@ -59,7 +59,7 @@ function Calc() {
 
   // amount of entries to be shown at once on table
   // this variable will change everything including displays and stuff
-  const blockSize = 13;
+  const blockSize = 10;
 
   // Sort the record list based on the input from the sort dropdown
   switch (selectedSorting) {
@@ -125,10 +125,10 @@ function Calc() {
         <div className="flex flex-row justify-left userForm">
           {/* Displaying heading text */}
           {/* Search Input Field */}
-          <span className="line">
+          <span className="line ml-10">
             <input
               type="text"
-              className="w-auto px-2 py-0 m-0 bg-white search"
+              className="search border-2 border-[#CECECE]"
               placeholder="Bank Name"
               onChange={(e) => setSearchVal(e.target.value)}
             ></input>{" "}
@@ -223,7 +223,7 @@ function Calc() {
                       depositVal;
                     document.getElementById("calcAPY").value = item.apyNum;
                   }}>
-                    <td className="w-1/4">{item.Bank != null ? item.Bank.toString() : "Null"}</td>
+                    <td className="w-1/4 bankName ml-2">{item.Bank != null ? item.Bank.toString() : "Null"}</td>
                     <td>
                       {item.TermAmnt != null ? item.TermAmnt.toString() : "Null"}{" "}
                       {item.TermType != null
@@ -250,16 +250,15 @@ function Calc() {
                 ))}
               {/* create a last row of the table with the buttons to click through the results */}
               <tr>
-                <td>
-                  <a onClick={() => setDisplayStart(0)}>{"first " + blockSize}</a>
-                </td>
+              
+               
                 <td>
                   {displayStart >= blockSize ? (
-                    <a onClick={() => setDisplayStart(displayStart - blockSize)}>
-                      {"< previous " + blockSize}
+                    <a className="next" onClick={() => setDisplayStart(displayStart - blockSize)}>
+                      {"Previous"}
                     </a>
                   ) : (
-                    <span></span>
+                    <span className="next-inactive">Previous</span>
                   )}
                 </td>
                 <td></td>
@@ -280,13 +279,13 @@ function Calc() {
                             item.days > 12 * 31 &&
                             item.days < 36 * 31) ||
                           (termLength === "long" && item.days > 36 * 31)) &&
-                        (depositVal == 0 ||
+                        (depositVal === 0 ||
                           depositVal === null ||
                           item.Deposit <= depositVal)
                     ).length ? (
-                    <a onClick={() => setDisplayStart(displayStart + blockSize)}>
-                      {"next " + blockSize + " >"}
-                    </a>
+                    <div className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
+                      {"Next"}
+                    </div>
                   ) : (
                     <span></span>
                   )}
@@ -296,9 +295,11 @@ function Calc() {
             </tbody>
           </table>
         </div>
-        <div id="calculator" className="flex flex-col mt-10 calc ">
+        <div id="calculator" className="flex flex-col mt-12 calc align-center">
           {/* input field for term length */}
-          <span className="line flex flex-row">
+          <div className="flex justify-center mt-5 mb-5"><h1 className="font-bold text-3xl justify-center">CD Calculator</h1></div>
+          
+          <span className="line flex flex-row ml-10 mt-">
             Term:{" "}
             <input
               id="calcTerm"
@@ -308,10 +309,10 @@ function Calc() {
               onChange={(e) => setCalcTerm(e.target.value)}
             ></input>{" "}
             <span id="calcTermType">Months</span>
-            {", "}
+            
           </span>
           {/* input field for deposit amount */}
-          <span className="line  flex flex-row">
+          <span className="line flex flex-row ml-10">
             Deposit:$
             <input
               id="calcDeposit"
@@ -322,7 +323,7 @@ function Calc() {
             ></input>{" "}
           </span>
           {/* input field for APY */}
-          <span className="line  flex flex-row">
+          <span className="line  flex flex-row ml-10">
             APY:{" "}
             <input
               id="calcAPY"
@@ -334,12 +335,24 @@ function Calc() {
             {"% "}
           </span>
           {/* output field for extimated profit */}
-          <span className="line">
-            Est. Profit:{" "}
+          <div className="flex justify-center"> <hr/>
+      </div>
+
+          <div className="flex justify-center text-center">
+          <span className="line text-3xl flex flex-col justify-center ml-20">
+            Est. Profit
             <span id="estimatedEarnings">
               {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
             </span>
           </span>
+          </div>
+          <div className="flex justify-center"> <hr/>
+      </div>
+         <div className="flex justify-center">
+          <button className="bankSite">
+                  Get This Rate
+          </button>
+          </div>
         </div>
       </div>
     </div>
