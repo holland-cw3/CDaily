@@ -67,12 +67,18 @@ tr:last-of-type {
 }
 
 .next{
+    background-color: rgba(123, 154, 109, .3);
     border-radius: 10px;
     padding: .5vw;
     border: 1px solid white;
     padding-left: 7vw;
     padding-right: 7vw;
     font-weight: bold;
+}
+
+.next:hover{
+    background-color: rgba(123, 154, 109, .7);
+
 }
 
 .next-inactive{
