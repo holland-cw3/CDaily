@@ -304,7 +304,7 @@ function Calc() {
         <span className="line" style={{ paddingLeft: 5 + "px" }}>
           Est. Profit:{" "}
           <span id="estimatedEarnings">
-            {"$" + new Intl.NumberFormat().format(getCalcValue())}
+            {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
           </span>
         </span>
       </div>
