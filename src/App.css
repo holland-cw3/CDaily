@@ -2,18 +2,22 @@
 
 .App {
   text-align: center;
-  
-
 
 }
+
+
 body{
   background-image: url("./Images/bg.png");
   background-size: cover;
   background-repeat: none;
-  overflow-x: hidden;
   color: white;
+  overflow-x: hidden; 
 
 
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 

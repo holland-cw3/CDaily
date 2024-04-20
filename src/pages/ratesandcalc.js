@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CSS/Header.css";
+import "../CSS/table.css";
 
 function Calc() {
   // Importing records data from JSON file
@@ -118,233 +118,237 @@ function Calc() {
 
   // display the page
   return (
-    <div className="flex flex-col items-center justify-center">
-      {/* Displaying heading text */}
-      <h3 className="text-white text-3xl font-bold mt-5 mb-5">CDaily Rates</h3>
-      {/* Search Input Field */}
-      <span className="line" style={{ paddingLeft: 5 + "px" }}>
-        Search:{" "}
-        <input
-          type="text"
-          className="w-auto px-2 py-0 m-0 bg-white"
-          placeholder="Bank Name"
-          onChange={(e) => setSearchVal(e.target.value)}
-        ></input>{" "}
-      </span>
-      {/* Sort Dropdown */}
-      <span className="line" style={{ paddingLeft: 5 + "px" }}>
-        Sort By:{" "}
-        <select
-          value={selectedSorting}
-          onChange={(e) => setSelectedSorting(e.target.value)}
-        >
-          <option value="default">Default</option>
-          <option value="highestAPY">Highest APY</option>
-          <option value="shortest">Shortest Term</option>
-          <option value="longest">Longest Term</option>
-          <option value="lowestDeposit">Lowest Deposit</option>
-          <option value="highestDeposit">Highest Deposit</option>
-        </select>
-      </span>
-      {/* Term length dropdown*/}
-      <span className="line" style={{ paddingLeft: 5 + "px" }}>
-        Term Length:{" "}
-        <select
-          value={termLength}
-          onChange={(e) => {
-            setTermLength(e.target.value);
-          }}
-        >
-          <option value="all">All</option>
-          <option value="short">0-12 Months</option>
-          <option value="medium">12-36 Months</option>
-          <option value="long">Beyond 36 Months</option>
-        </select>
-      </span>
-      {/* Deposit amount input */}
-      <span className="line" style={{ paddingLeft: 5 + "px" }}>
-        Deposit Amount:{" "}
-        <input
-          type="number"
-          className="w-auto px-2 py-0 m-0 bg-white"
-          placeholder="$0"
-          onChange={(e) => setDepositVal(e.target.value)}
-        ></input>{" "}
-      </span>
-      {/* The table of rates */}
-      <div className="tableContainer">
-        <table className="mb-10 table-auto">
-          {/* Displaying table head with name for fields */}
-          <thead>
-            <tr>
-              <th>Bank</th>
-              <th>Term Length</th>
-              <th>Min Deposit</th>
-              <th>APY</th>
-              <th>Bank Link</th>
-              <th>Calculator Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* map the items in the Rates List to JSX Objects so they can be displayed */}
-            {/* use the filter to make sure that the results match the input categories for the search */}
-            {/* use slice to display parts of the results at a time */}
-            {RatesList.filter(
-              (item) =>
-                (searchVal === "" ||
-                  item.Bank.toLowerCase().includes(searchVal.toLowerCase())) &&
-                (termLength === "all" ||
-                  (termLength === "short" && item.days <= 12 * 31) ||
-                  (termLength === "medium" &&
-                    item.days > 12 * 31 &&
-                    item.days < 36 * 31) ||
-                  (termLength === "long" && item.days > 36 * 31)) &&
-                (depositVal == 0 ||
-                  depositVal === null ||
-                  item.Deposit <= depositVal)
-            )
-              .slice(displayStart, displayStart + blockSize)
-              .map((item) => (
-                <tr>
-                  <td>{item.Bank != null ? item.Bank.toString() : "Null"}</td>
-                  <td>
-                    {item.TermAmnt != null ? item.TermAmnt.toString() : "Null"}{" "}
-                    {item.TermType != null
-                      ? item.TermType.charAt(0) +
+    <div className="flex flex-col">
+      <div className="form text-black">
+        <div className="flex flex-row justify-left userForm">
+          {/* Displaying heading text */}
+          {/* Search Input Field */}
+          <span className="line">
+            <input
+              type="text"
+              className="w-auto px-2 py-0 m-0 bg-white search"
+              placeholder="Bank Name"
+              onChange={(e) => setSearchVal(e.target.value)}
+            ></input>{" "}
+          </span>
+          {/* Sort Dropdown */}
+          <span className="line">
+            <select
+              value={selectedSorting}
+              onChange={(e) => setSelectedSorting(e.target.value)}
+            >
+              <option value="Sort By">Default</option>
+              <option value="highestAPY">Highest APY</option>
+              <option value="shortest">Shortest Term</option>
+              <option value="longest">Longest Term</option>
+              <option value="lowestDeposit">Lowest Deposit</option>
+              <option value="highestDeposit">Highest Deposit</option>
+            </select>
+          </span>
+          {/* Term length dropdown*/}
+          <span className="line">
+            
+            <select
+              value={termLength}
+              onChange={(e) => {
+                setTermLength(e.target.value);
+              }}
+            >
+              <option value="all">Term Length</option>
+              <option value="short">0-12 Months</option>
+              <option value="medium">12-36 Months</option>
+              <option value="long">Beyond 36 Months</option>
+            </select>
+          </span>
+          {/* Deposit amount input */}
+          <span className="line">
+            <input
+              type="number"
+              className="w-auto px-2 py-0 m-0 bg-white"
+              placeholder="Deposit Amount ($)"
+              onChange={(e) => setDepositVal(e.target.value)}
+            ></input>{" "}
+          </span>
+
+          {/* this is the calculator */}
+
+        </div>
+      </div>
+      <div className="flex flex-row">
+        {/* The table of rates */}
+        <div className="tableContainer mt-6 w-1/4 ml-15 mr-5">
+          <table className="mb-10 table-auto">
+            {/* Displaying table head with name for fields */}
+            <thead>
+              <tr>
+                <th>Bank</th>
+                <th>Term Length</th>
+                <th>Min Deposit</th>
+                <th>APY</th>
+                <th>Bank Link</th>
+                <th>Calculator Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* map the items in the Rates List to JSX Objects so they can be displayed */}
+              {/* use the filter to make sure that the results match the input categories for the search */}
+              {/* use slice to display parts of the results at a time */}
+              {RatesList.filter(
+                (item) =>
+                  (searchVal === "" ||
+                    item.Bank.toLowerCase().includes(searchVal.toLowerCase())) &&
+                  (termLength === "all" ||
+                    (termLength === "short" && item.days <= 12 * 31) ||
+                    (termLength === "medium" &&
+                      item.days > 12 * 31 &&
+                      item.days < 36 * 31) ||
+                    (termLength === "long" && item.days > 36 * 31)) &&
+                  (depositVal == 0 ||
+                    depositVal === null ||
+                    item.Deposit <= depositVal)
+              )
+                .slice(displayStart, displayStart + blockSize)
+                .map((item) => (
+                  <tr>
+                    <td className="w-1/4">{item.Bank != null ? item.Bank.toString() : "Null"}</td>
+                    <td>
+                      {item.TermAmnt != null ? item.TermAmnt.toString() : "Null"}{" "}
+                      {item.TermType != null
+                        ? item.TermType.charAt(0) +
                         item.TermType.slice(1).toLowerCase()
-                      : "Null"}
-                  </td>
-                  <td>
-                    {item.Deposit != null
-                      ? item.minDepositDisplay.toString()
-                      : "Null"}
-                  </td>
-                  <td> {item.APY != null ? item.APY.toString() : "Null"}</td>
-                  <td>
-                    <a
-                      target="_blank"
-                      href={item.Url != null ? item.Url.toString() : "Null"}
-                    >
-                      Bank Site
+                        : "Null"}
+                    </td>
+                    <td>
+                      {item.Deposit != null
+                        ? item.minDepositDisplay.toString()
+                        : "Null"}
+                    </td>
+                    <td> {item.APY != null ? item.APY.toString() : "Null"}</td>
+                    <td>
+                      <a
+                        target="_blank"
+                        href={item.Url != null ? item.Url.toString() : "Null"}
+                      >
+                        Bank Site
+                      </a>
+                    </td>
+                    <td>
+                      {/* this on click function adds the current CD's values into the calculator */}
+                      {/* we may want to move this on click to a different element */}
+                      <a
+                        onClick={() => {
+                          setCalcTerm(item.TermAmnt);
+                          setCalcTermType(item.TermType);
+                          setCalcDeposit(depositVal);
+                          setCalcAPY(item.apyNum);
+                          document.getElementById("calcTerm").value =
+                            item.TermAmnt;
+                          document.getElementById("calcTermType").innerText =
+                            item.TermType.charAt(0) +
+                            item.TermType.slice(1).toLowerCase();
+                          document.getElementById("calcDeposit").value =
+                            depositVal;
+                          document.getElementById("calcAPY").value = item.apyNum;
+                        }}
+                      >
+                        Open In Calculator
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              {/* create a last row of the table with the buttons to click through the results */}
+              <tr>
+                <td>
+                  <a onClick={() => setDisplayStart(0)}>{"first " + blockSize}</a>
+                </td>
+                <td>
+                  {displayStart >= blockSize ? (
+                    <a onClick={() => setDisplayStart(displayStart - blockSize)}>
+                      {"< previous " + blockSize}
                     </a>
-                  </td>
-                  <td>
-                    {/* this on click function adds the current CD's values into the calculator */}
-                    {/* we may want to move this on click to a different element */}
-                    <a
-                      onClick={() => {
-                        setCalcTerm(item.TermAmnt);
-                        setCalcTermType(item.TermType);
-                        setCalcDeposit(depositVal);
-                        setCalcAPY(item.apyNum);
-                        document.getElementById("calcTerm").value =
-                          item.TermAmnt;
-                        document.getElementById("calcTermType").innerHTML =
-                          item.TermType.charAt(0) +
-                          item.TermType.slice(1).toLowerCase();
-                        document.getElementById("calcDeposit").value =
-                          depositVal;
-                        document.getElementById("calcAPY").value = item.apyNum;
-                      }}
-                    >
-                      Open In Calculator
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            {/* create a last row of the table with the buttons to click through the results */}
-            <tr>
-              <td>
-                <a onClick={() => setDisplayStart(0)}>{"first " + blockSize}</a>
-              </td>
-              <td>
-                {displayStart >= blockSize ? (
-                  <a onClick={() => setDisplayStart(displayStart - blockSize)}>
-                    {"< previous " + blockSize}
-                  </a>
-                ) : (
-                  <span></span>
-                )}
-              </td>
-              <td></td>
-              <td>
-                {/* this looks very complicated but basically we're checking if there are any more
+                  ) : (
+                    <span></span>
+                  )}
+                </td>
+                <td></td>
+                <td>
+                  {/* this looks very complicated but basically we're checking if there are any more
                 results that need to be displayed, this is a great implimentation but for now we just
                 refilter the array and get its length */}
-                {displayStart + blockSize <=
-                RatesList.filter(
-                  (item) =>
-                    (searchVal === "" ||
-                      item.Bank.toLowerCase().includes(
-                        searchVal.toLowerCase()
-                      )) &&
-                    (termLength === "all" ||
-                      (termLength === "short" && item.days <= 12 * 31) ||
-                      (termLength === "medium" &&
-                        item.days > 12 * 31 &&
-                        item.days < 36 * 31) ||
-                      (termLength === "long" && item.days > 36 * 31)) &&
-                    (depositVal == 0 ||
-                      depositVal === null ||
-                      item.Deposit <= depositVal)
-                ).length ? (
-                  <a onClick={() => setDisplayStart(displayStart + blockSize)}>
-                    {"next " + blockSize + " >"}
-                  </a>
-                ) : (
-                  <span></span>
-                )}
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      {/* this is the calculator */}
-      <div id="calculator">
-        {/* input field for term length */}
-        <span className="line" style={{ paddingLeft: 5 + "px" }}>
-          Term:{" "}
-          <input
-            id="calcTerm"
-            type="number"
-            className="w-auto px-2 py-0 m-0 bg-white"
-            placeholder="0 Months"
-            onChange={(e) => setCalcTerm(e.target.value)}
-          ></input>{" "}
-          <span id="calcTermType">Months</span>
-          {", "}
-        </span>
-        {/* input field for deposit amount */}
-        <span className="line" style={{ paddingLeft: 5 + "px" }}>
-          Deposit:{" $"}
-          <input
-            id="calcDeposit"
-            type="number"
-            className="w-auto px-2 py-0 m-0 bg-white"
-            placeholder="$0"
-            onChange={(e) => setCalcDeposit(e.target.value)}
-          ></input>{" "}
-        </span>
-        {/* input field for APY */}
-        <span className="line" style={{ paddingLeft: 5 + "px" }}>
-          APY:{" "}
-          <input
-            id="calcAPY"
-            type="number"
-            className="w-auto px-2 py-0 m-0 bg-white"
-            placeholder="0.00%"
-            onChange={(e) => setCalcAPY(e.target.value)}
-          ></input>
-          {"% "}
-        </span>
-        {/* output field for extimated profit */}
-        <span className="line" style={{ paddingLeft: 5 + "px" }}>
-          Est. Profit:{" "}
-          <span id="estimatedEarnings">
-            {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
+                  {displayStart + blockSize <=
+                    RatesList.filter(
+                      (item) =>
+                        (searchVal === "" ||
+                          item.Bank.toLowerCase().includes(
+                            searchVal.toLowerCase()
+                          )) &&
+                        (termLength === "all" ||
+                          (termLength === "short" && item.days <= 12 * 31) ||
+                          (termLength === "medium" &&
+                            item.days > 12 * 31 &&
+                            item.days < 36 * 31) ||
+                          (termLength === "long" && item.days > 36 * 31)) &&
+                        (depositVal == 0 ||
+                          depositVal === null ||
+                          item.Deposit <= depositVal)
+                    ).length ? (
+                    <a onClick={() => setDisplayStart(displayStart + blockSize)}>
+                      {"next " + blockSize + " >"}
+                    </a>
+                  ) : (
+                    <span></span>
+                  )}
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="calculator" className="flex flex-col mt-10 calc ">
+          {/* input field for term length */}
+          <span className="line flex flex-row">
+            Term:{" "}
+            <input
+              id="calcTerm"
+              type="number"
+              className="w-auto px-2 py-0 m-0 bg-white text-black"
+              placeholder="0 Months"
+              onChange={(e) => setCalcTerm(e.target.value)}
+            ></input>{" "}
+            <span id="calcTermType">Months</span>
+            {", "}
           </span>
-        </span>
+          {/* input field for deposit amount */}
+          <span className="line  flex flex-row">
+            Deposit:$
+            <input
+              id="calcDeposit"
+              type="number"
+              className="w-auto px-2 py-0 m-0 bg-white text-black"
+              placeholder="$0"
+              onChange={(e) => setCalcDeposit(e.target.value)}
+            ></input>{" "}
+          </span>
+          {/* input field for APY */}
+          <span className="line  flex flex-row">
+            APY:{" "}
+            <input
+              id="calcAPY"
+              type="number"
+              className="w-auto px-2 py-0 m-0 bg-white text-black"
+              placeholder="0.00%"
+              onChange={(e) => setCalcAPY(e.target.value)}
+            ></input>
+            {"% "}
+          </span>
+          {/* output field for extimated profit */}
+          <span className="line">
+            Est. Profit:{" "}
+            <span id="estimatedEarnings">
+              {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   );

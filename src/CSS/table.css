@@ -1,0 +1,39 @@
+.tableContainer{
+    width: 65%;
+    z-index: 100;
+}
+
+.userForm{
+    margin-left: 5vw;
+    width: 100%;
+    z-index: 100;
+    margin-top: 13vh;
+}
+
+.line{
+    margin-bottom:2vh;
+    width:10vw;
+    margin-right: 8vw;
+
+}
+th{
+    width: 10vw;
+}
+
+td{
+    text-align: center;
+    width: 10vw;
+}
+
+.searchbank{
+    border-radius: 2px soli
+}
+
+.calc{
+    background-color: rgba(255,255,255,0.1);
+    width:25%;
+    height: 70vh;
+    margin-left: 3vw;
+}
+
+

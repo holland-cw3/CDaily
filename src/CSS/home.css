@@ -20,7 +20,7 @@ h2{
 .textContainer{
     position: absolute;
     width: 100%;
-    z-index: 22;
+    z-index: 5;
     top: 0;
     margin-top: 100vh;
 
@@ -28,7 +28,7 @@ h2{
 .textContainer2{
     position: absolute;
     width: 100%;
-    z-index: 22;
+    z-index: 5;
     top: 0;
     margin-top: 200vh;
 
