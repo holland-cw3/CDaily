@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/table.css";
 
-
 function Calc() {
-
   // Importing records data from JSON file
   const RatesList = require("../data/rates.json");
 
@@ -121,7 +119,6 @@ function Calc() {
   // display the page
   return (
     <div className="flex flex-col">
-
       <div className="form text-black">
         <div className="flex flex-row justify-left userForm">
           {/* Displaying heading text */}
@@ -132,9 +129,8 @@ function Calc() {
               className="search border-2 border-[#CECECE]"
               placeholder="Bank Name "
               onChange={(e) => setSearchVal(e.target.value)}
-            ></input>{ }
-
-
+            ></input>
+            {}
           </span>
           {/* Sort Dropdown */}
           <span className="line">
@@ -144,30 +140,48 @@ function Calc() {
               className="search border-2 border-[#CECECE] text-white text-opacity-50
               "
             >
-              <option value="Sort By" className="opt">Default</option>
-              <option value="highestAPY" className="opt">Highest APY</option>
-              <option value="shortest" className="opt">Shortest Term</option>
-              <option value="longest" className="opt">Longest Term</option>
-              <option value="lowestDeposit" className="opt">Lowest Deposit</option>
-              <option value="highestDeposit" className="opt">Highest Deposit</option>
+              <option value="Sort By" className="opt">
+                Default
+              </option>
+              <option value="highestAPY" className="opt">
+                Highest APY
+              </option>
+              <option value="shortest" className="opt">
+                Shortest Term
+              </option>
+              <option value="longest" className="opt">
+                Longest Term
+              </option>
+              <option value="lowestDeposit" className="opt">
+                Lowest Deposit
+              </option>
+              <option value="highestDeposit" className="opt">
+                Highest Deposit
+              </option>
             </select>
           </span>
           {/* Term length dropdown*/}
           <span className="line ">
-
             <select
               value={termLength}
               onChange={(e) => {
                 setTermLength(e.target.value);
-              }} className="search border-2 border-[#CECECE] text-white text-opacity-50
+              }}
+              className="search border-2 border-[#CECECE] text-white text-opacity-50
               "
             >
-
-              <option value="all" className="opt">Term Length</option>
-              <option value="short" className="opt">0-12 Months</option>
-              <option value="medium" className="opt">12-36 Months</option>
-              <option value="long" className="opt">36+ Months</option>
-
+              <option value="all" className="opt">
+                Term Length
+              </option>
+              <option value="short" className="opt">
+                0-12 Months
+              </option>
+              <option value="medium" className="opt">
+                12-36 Months
+              </option>
+              <option value="long" className="opt">
+                36+ Months
+              </option>
             </select>
           </span>
           {/* Deposit amount input */}
@@ -181,7 +195,6 @@ function Calc() {
           </span>
 
           {/* this is the calculator */}
-
         </div>
       </div>
       <div className="flex flex-row">
@@ -203,7 +216,9 @@ function Calc() {
               {RatesList.filter(
                 (item) =>
                   (searchVal === "" ||
-                    item.Bank.toLowerCase().includes(searchVal.toLowerCase())) &&
+                    item.Bank.toLowerCase().includes(
+                      searchVal.toLowerCase()
+                    )) &&
                   (termLength === "all" ||
                     (termLength === "short" && item.days <= 12 * 31) ||
                     (termLength === "medium" &&
@@ -216,26 +231,36 @@ function Calc() {
               )
                 .slice(displayStart, displayStart + blockSize)
                 .map((item) => (
-                  <tr className="mt-10" for="btnControl" onClick={() => {
-                    setCalcTerm(item.TermAmnt);
-                    setCalcTermType(item.TermType);
-                    setCalcDeposit(depositVal);
-                    setCalcAPY(item.apyNum);
-                    document.getElementById("calcTerm").value =
-                      item.TermAmnt;
-                    document.getElementById("calcTermType").innerText =
-                      item.TermType.charAt(0) +
-                      item.TermType.slice(1).toLowerCase();
-                    document.getElementById("calcDeposit").value =
-                      depositVal;
-                    document.getElementById("calcAPY").value = item.apyNum;
-                  }}>
-                    <td className="w-1/4 bankName ml-2">{item.Bank != null ? item.Bank.toString() : "Null"}</td>
+                  <tr
+                    className="mt-10"
+                    for="btnControl"
+                    onClick={() => {
+                      setCalcTerm(item.TermAmnt);
+                      setCalcTermType(item.TermType);
+                      setCalcDeposit(depositVal);
+                      setCalcAPY(item.apyNum);
+                      document.getElementById("calcTerm").value = item.TermAmnt;
+                      if (
+                        document.getElementById("calcDeposit").value > 0 ==
+                        false
+                      ) {
+                        setCalcDeposit(depositVal);
+                        document.getElementById("calcDeposit").value =
+                          depositVal;
+                      }
+                      document.getElementById("calcAPY").value = item.apyNum;
+                    }}
+                  >
+                    <td className="w-1/4 bankName ml-2">
+                      {item.Bank != null ? item.Bank.toString() : "Null"}
+                    </td>
                     <td>
-                      {item.TermAmnt != null ? item.TermAmnt.toString() : "Null"}{" "}
+                      {item.TermAmnt != null
+                        ? item.TermAmnt.toString()
+                        : "Null"}{" "}
                       {item.TermType != null
                         ? item.TermType.charAt(0) +
-                        item.TermType.slice(1).toLowerCase()
+                          item.TermType.slice(1).toLowerCase()
                         : "Null"}
                     </td>
                     <td>
@@ -253,16 +278,17 @@ function Calc() {
                         Bank Site
                       </a>
                     </td>
-
                   </tr>
                 ))}
 
               {/* create a last row of the table with the buttons to click through the results */}
               <tr>
-
                 <td>
                   {displayStart >= blockSize ? (
-                    <a className="next" onClick={() => setDisplayStart(displayStart - blockSize)}>
+                    <a
+                      className="next"
+                      onClick={() => setDisplayStart(displayStart - blockSize)}
+                    >
                       {"Prev"}
                     </a>
                   ) : (
@@ -275,53 +301,54 @@ function Calc() {
                 results need to be displayed, this is a great implimentation but for now we just
                 refilter the array and get its length */}
                   {displayStart + blockSize <=
-                    RatesList.filter(
-                      (item) =>
-                        (searchVal === "" ||
-                          item.Bank.toLowerCase().includes(
-                            searchVal.toLowerCase()
-                          )) &&
-                        (termLength === "all" ||
-                          (termLength === "short" && item.days <= 12 * 31) ||
-                          (termLength === "medium" &&
-                            item.days > 12 * 31 &&
-                            item.days < 36 * 31) ||
-                          (termLength === "long" && item.days > 36 * 31)) &&
-                        (depositVal === 0 ||
-                          depositVal === null ||
-                          item.Deposit <= depositVal)
-                    ).length ? (
-                    <a className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
+                  RatesList.filter(
+                    (item) =>
+                      (searchVal === "" ||
+                        item.Bank.toLowerCase().includes(
+                          searchVal.toLowerCase()
+                        )) &&
+                      (termLength === "all" ||
+                        (termLength === "short" && item.days <= 12 * 31) ||
+                        (termLength === "medium" &&
+                          item.days > 12 * 31 &&
+                          item.days < 36 * 31) ||
+                        (termLength === "long" && item.days > 36 * 31)) &&
+                      (depositVal === 0 ||
+                        depositVal === null ||
+                        item.Deposit <= depositVal)
+                  ).length ? (
+                    <a
+                      className="next"
+                      onClick={() => setDisplayStart(displayStart + blockSize)}
+                    >
                       {"Next"}
                     </a>
-
                   ) : (
                     <span className="next-inactive ">Next</span>
                   )}
                 </td>
                 <td></td>
               </tr>
-
             </tbody>
           </table>
         </div>
         <div id="calculator" className="flex flex-col mt-5 calc align-center">
           {/* input field for term length */}
-          <div className="flex flex-row justify-center mt-5 mb-5"><h1 className="font-bold text-3xl justify-center">CD Calculator</h1></div>
+          <div className="flex flex-row justify-center mt-5 mb-5">
+            <h1 className="font-bold text-3xl justify-center">CD Calculator</h1>
+          </div>
           <div className="grid grid-cols-3 ml-5">
             <p className="text-center font-bold -ml-7">Term</p>
             <p className="text-center font-bold -ml-7">Deposit</p>
             <p className="text-center font-bold -ml-7">APY</p>
             <div className="line ">
-
               <input
                 id="calcTerm"
                 type="number"
                 className="formIn border-2"
                 placeholder="None"
-                onChange={(e) => (setCalcTerm(e.target.value))}
+                onChange={(e) => setCalcTerm(e.target.value)}
               ></input>{" "}
-
             </div>
             <div className="line">
               <input
@@ -341,36 +368,34 @@ function Calc() {
                 placeholder="APY"
                 onChange={(e) => setCalcAPY(e.target.value)}
               ></input>
-
             </div>
           </div>
-          
-          
+
           {/* output field for extimated profit */}
-          <div className="flex justify-center"> <hr />
-          </div>
-<div className="flex flex-col">
-          <div className="flex justify-center text-center ml-20">
-            <span className="line text-3xl flex flex-col justify-center ml-10 mt-1">
-              Est. Profit
-              <span id="estimatedEarnings" className="text-[#7b9a6d]">
-                {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
-              </span>
-            </span>
-          </div>
-          <div className="flex justify-center"> <hr />
-          </div>
           <div className="flex justify-center">
-            <button className="bankSite mb-5 font-bold">
-             Calculate
-            </button>
-            
+            {" "}
+            <hr />
           </div>
-          
-        </div>
+          <div className="flex flex-col">
+            <div className="flex justify-center text-center ml-20">
+              <span className="line text-3xl flex flex-col justify-center ml-10 mt-1">
+                Est. Profit
+                <span id="estimatedEarnings" className="text-[#7b9a6d]">
+                  {"$" +
+                    new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
+                </span>
+              </span>
+            </div>
+            <div className="flex justify-center">
+              {" "}
+              <hr />
+            </div>
+            <div className="flex justify-center">
+              <button className="bankSite mb-5 font-bold">Calculate</button>
+            </div>
+          </div>
         </div>
       </div>
-      
     </div>
   );
 }
