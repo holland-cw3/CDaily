@@ -395,7 +395,17 @@ function Calc() {
               {" "}
               <hr />
             </div>
-            
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5877950634442895"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     
+     data-ad-client="ca-pub-5877950634442895"
+     data-ad-slot="8805444670"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
           </div>
         </div>
       </div>
