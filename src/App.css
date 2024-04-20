@@ -10,6 +10,8 @@ body{
   background-image: url("./Images/bg.png");
   background-size: cover;
   background-repeat: none;
+  overflow-x: hidden;
+
 }
 
 

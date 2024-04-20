@@ -44,9 +44,6 @@
 }
 
 
-
-
-
 .glass {
   z-index: 10; /* Increase z-index to be higher than bg-container */
   position: absolute; /* Add position absolute */
