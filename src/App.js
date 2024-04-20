@@ -2,7 +2,12 @@ import React from 'react';
 
 import './App.css';
 import Header from "./components/Header";
+import Emails from "./pages/email";
+import Extension from "./pages/extension";
+import Home from "./pages/home";
+
 import Rates from "./pages/ratesandcalc";
+
 
 
 
@@ -14,7 +19,13 @@ function App() {
     <Router>
       <Header/>
       <Routes>
+      <Route path="/" element={<Home />} /> 
+      <Route path="/emails" element={<Emails />} /> 
+
+      <Route path="/extension" element={<Extension />} /> 
+
       <Route path="/ratesandcalc" element={<Rates />} /> 
+
 
       
       </Routes>
