@@ -167,8 +167,7 @@ function Calc() {
               onChange={(e) => {
                 setTermLength(e.target.value);
               }}
-              className="search border-2 border-[#CECECE] text-white text-opacity-50
-              "
+              className="search"
             >
               <option value="all" className="opt">
                 Term Length
