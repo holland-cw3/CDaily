@@ -25,6 +25,14 @@ function Calc() {
       RatesList[i].days = RatesList[i].TermAmnt;
     }
 
+    // calculate profit based on $100 investment
+    let depositAmount = 100;
+    let realAPY = 1 + RatesList[i].apyNum / 100;
+    // compound based on terms
+    let overall_apy = realAPY ** (RatesList[i].days / 365);
+    // return the profit
+    RatesList[i].expProfit = depositAmount * overall_apy - depositAmount;
+
     // format the minimum deposit with currency formatting
     if (RatesList[i].Deposit === null || isNaN(RatesList[i].Deposit)) {
       RatesList[i].Deposit = 0;
@@ -35,55 +43,63 @@ function Calc() {
 
   // create a state to store the sort value
   const [selectedSorting, setSelectedSorting] = useState("default");
+  // create states for filtering the rates
   const [searchVal, setSearchVal] = useState("");
   const [depositVal, setDepositVal] = useState(0);
   const [termLength, setTermLength] = useState("all");
   // state for knowing which set of entries in the table are being viewed
   const [displayStart, setDisplayStart] = useState(0);
 
-  // states for calculator
+  // states for calculator data
   const [calcTerm, setCalcTerm] = useState(0);
   const [calcDeposit, setCalcDeposit] = useState(0);
   const [calcAPY, setCalcAPY] = useState(0);
   const [calcTermType, setCalcTermType] = useState("MONTH");
 
   // amount of entries to be shown at once on table
-  // this will change everything including displays and stuff
+  // this variable will change everything including displays and stuff
   const blockSize = 20;
-
-  RatesList.sort((a, b) => Math.random() - Math.random());
 
   // Sort the record list based on the input from the sort dropdown
   switch (selectedSorting) {
     case "highestAPY":
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
       RatesList.sort((a, b) => b.apyNum - a.apyNum);
       break;
     case "longest":
+      // always sort by highest APY and expected profit first
       RatesList.sort((a, b) => a.apyNum - b.apyNum);
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
       RatesList.sort((a, b) => b.days - a.days);
       break;
     case "shortest":
       RatesList.sort((a, b) => a.apyNum - b.apyNum);
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
       RatesList.sort((a, b) => a.days - b.days);
       break;
     case "highestDeposit":
       RatesList.sort((a, b) => a.apyNum - b.apyNum);
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
       RatesList.sort((a, b) => b.Deposit - a.Deposit);
       break;
     case "lowestDeposit":
       RatesList.sort((a, b) => a.apyNum - b.apyNum);
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
       RatesList.sort((a, b) => a.Deposit - b.Deposit);
       break;
     default:
+      // default sorting uses deposit, days, and APY
       RatesList.sort((a, b) => a.Deposit - b.Deposit);
       RatesList.sort((a, b) => a.days - b.days);
       RatesList.sort((a, b) => b.apyNum - a.apyNum);
+      RatesList.sort((a, b) => b.expProfit - a.expProfit);
   }
 
+  // function that calculates the return for the calculator
   function getCalcValue() {
     let days = 0;
     if (calcTermType === "MONTH") {
-      // if the term type is month, multiply amnt by 31
+      // if the term type is month, multiply term by 31
       days = calcTerm * 31;
     } else if (calcTermType === "YEAR") {
       // if the term type is year, multiply amnt by 365
@@ -92,8 +108,11 @@ function Calc() {
       // if the term type is day, do nothing
       days = calcTerm;
     }
+    // convert from percentage
     let realAPY = 1 + calcAPY / 100;
+    // compound based on terms
     let overall_apy = realAPY ** (days / 365);
+    // return the profit
     return calcDeposit * overall_apy - calcDeposit;
   }
 
@@ -102,6 +121,7 @@ function Calc() {
     <div className="flex flex-col items-center justify-center">
       {/* Displaying heading text */}
       <h3 className="text-white text-3xl font-bold mt-5 mb-5">CDaily Rates</h3>
+      {/* Search Input Field */}
       <span className="line" style={{ paddingLeft: 5 + "px" }}>
         Search:{" "}
         <input
@@ -111,6 +131,7 @@ function Calc() {
           onChange={(e) => setSearchVal(e.target.value)}
         ></input>{" "}
       </span>
+      {/* Sort Dropdown */}
       <span className="line" style={{ paddingLeft: 5 + "px" }}>
         Sort By:{" "}
         <select
@@ -125,6 +146,7 @@ function Calc() {
           <option value="highestDeposit">Highest Deposit</option>
         </select>
       </span>
+      {/* Term length dropdown*/}
       <span className="line" style={{ paddingLeft: 5 + "px" }}>
         Term Length:{" "}
         <select
@@ -139,6 +161,7 @@ function Calc() {
           <option value="long">Beyond 36 Months</option>
         </select>
       </span>
+      {/* Deposit amount input */}
       <span className="line" style={{ paddingLeft: 5 + "px" }}>
         Deposit Amount:{" "}
         <input
@@ -148,6 +171,7 @@ function Calc() {
           onChange={(e) => setDepositVal(e.target.value)}
         ></input>{" "}
       </span>
+      {/* The table of rates */}
       <div className="tableContainer">
         <table className="mb-10 table-auto">
           {/* Displaying table head with name for fields */}
@@ -163,6 +187,8 @@ function Calc() {
           </thead>
           <tbody>
             {/* map the items in the Rates List to JSX Objects so they can be displayed */}
+            {/* use the filter to make sure that the results match the input categories for the search */}
+            {/* use slice to display parts of the results at a time */}
             {RatesList.filter(
               (item) =>
                 (searchVal === "" ||
@@ -203,19 +229,22 @@ function Calc() {
                     </a>
                   </td>
                   <td>
+                    {/* this on click function adds the current CD's values into the calculator */}
+                    {/* we may want to move this on click to a different element */}
                     <a
                       onClick={() => {
                         setCalcTerm(item.TermAmnt);
-                        document.getElementById("calcTerm").value = calcTerm;
                         setCalcTermType(item.TermType);
+                        setCalcDeposit(depositVal);
+                        setCalcAPY(item.apyNum);
+                        document.getElementById("calcTerm").value =
+                          item.TermAmnt;
                         document.getElementById("calcTermType").innerHTML =
                           item.TermType.charAt(0) +
                           item.TermType.slice(1).toLowerCase();
-                        setCalcDeposit(depositVal);
                         document.getElementById("calcDeposit").value =
-                          calcDeposit;
-                        setCalcAPY(item.apyNum);
-                        document.getElementById("calcAPY").value = calcAPY;
+                          depositVal;
+                        document.getElementById("calcAPY").value = item.apyNum;
                       }}
                     >
                       Open In Calculator
@@ -223,6 +252,7 @@ function Calc() {
                   </td>
                 </tr>
               ))}
+            {/* create a last row of the table with the buttons to click through the results */}
             <tr>
               <td>
                 <a onClick={() => setDisplayStart(0)}>{"first " + blockSize}</a>
@@ -238,6 +268,9 @@ function Calc() {
               </td>
               <td></td>
               <td>
+                {/* this looks very complicated but basically we're checking if there are any more
+                results that need to be displayed, this is a great implimentation but for now we just
+                refilter the array and get its length */}
                 {displayStart + blockSize <=
                 RatesList.filter(
                   (item) =>
@@ -267,7 +300,9 @@ function Calc() {
           </tbody>
         </table>
       </div>
+      {/* this is the calculator */}
       <div id="calculator">
+        {/* input field for term length */}
         <span className="line" style={{ paddingLeft: 5 + "px" }}>
           Term:{" "}
           <input
@@ -280,6 +315,7 @@ function Calc() {
           <span id="calcTermType">Months</span>
           {", "}
         </span>
+        {/* input field for deposit amount */}
         <span className="line" style={{ paddingLeft: 5 + "px" }}>
           Deposit:{" $"}
           <input
@@ -290,6 +326,7 @@ function Calc() {
             onChange={(e) => setCalcDeposit(e.target.value)}
           ></input>{" "}
         </span>
+        {/* input field for APY */}
         <span className="line" style={{ paddingLeft: 5 + "px" }}>
           APY:{" "}
           <input
@@ -301,6 +338,7 @@ function Calc() {
           ></input>
           {"% "}
         </span>
+        {/* output field for extimated profit */}
         <span className="line" style={{ paddingLeft: 5 + "px" }}>
           Est. Profit:{" "}
           <span id="estimatedEarnings">
