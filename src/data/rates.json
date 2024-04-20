@@ -1,0 +1,946 @@
+[
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "2.75%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 20000,
+    "APY": "2.75%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 100000,
+    "APY": "2.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 20000,
+    "APY": "4.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 100000,
+    "APY": "4.85%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.50%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 20000,
+    "APY": "4.50%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 100000,
+    "APY": "4.55%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.20%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 20000,
+    "APY": "4.20%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 100000,
+    "APY": "4.25%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 20000,
+    "APY": "4.00%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 100000,
+    "APY": "4.05%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 20000,
+    "APY": "3.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 100000,
+    "APY": "3.85%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 7,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 7,
+    "TermType": "YEAR",
+    "Deposit": 20000,
+    "APY": "3.80%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 7,
+    "TermType": "YEAR",
+    "Deposit": 100000,
+    "APY": "3.85%",
+    "Bank": "Navy Federal Credit Union",
+    "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html"
+  },
+  {
+    "TermAmnt": 60,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 49,
+    "TermType": "MONTH",
+    "Deposit": 10000,
+    "APY": "4.45%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 48,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.10%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 36,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.15%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 36,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.25%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.25%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.35%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 15,
+    "TermType": "MONTH",
+    "Deposit": 10000,
+    "APY": "5.25%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.50%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 250,
+    "APY": "4.40%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 50,
+    "APY": "4.50%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 9,
+    "TermType": "MONTH",
+    "Deposit": 10000,
+    "APY": "5.40%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.90%",
+    "Bank": "NASA Federal Credit Union",
+    "Url": "https://www.nasafcu.com/rates-and-fees/checking-savings/share-certificate-rates"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.70%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.75%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.55%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.55%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.30%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.30%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.10%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.10%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.95%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.95%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.80%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.85%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 7,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.70%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 7,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.75%",
+    "Bank": "Soarion Credit Union",
+    "Url": "https://www.soarion.org/invest/individual-retirement-accounts/ira-share-certificates"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.10%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 9,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.10",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 10,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.10%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.80",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.80%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.00",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 30,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.00%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 36,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.25%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 48,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.25%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 60,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.10%",
+    "Bank": "Capital One",
+    "Url": "https://www.capitalone.com/bank/cds/online-cds/"
+  },
+  {
+    "TermAmnt": 91,
+    "TermType": "DAY",
+    "Deposit": 1000,
+    "APY": "2.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 182,
+    "TermType": "DAY",
+    "Deposit": 1000,
+    "APY": "4.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 8,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "5.30%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 10,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "5.00%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 14,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.20%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 19,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "3.75%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 30,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.25%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 42,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "3.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "3.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "2.50%",
+    "Bank": "Capitol Federal",
+    "Url": "https://www.capfed.com/personal/savings/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.00%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 11,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.75%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 20,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.75%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 26,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.00%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 38,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.00%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 50,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.00%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "0.25%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "0.25%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "0.50%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "1.75%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 0,
+    "APY": "2.00%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "1.80%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 0,
+    "APY": "1.80%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 30,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "1.85%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 0,
+    "APY": "1.85%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 0,
+    "APY": "1.90%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 0,
+    "APY": "1.90%",
+    "Bank": "United Bank",
+    "Url": "https://www.bankwithunited.com/personal-banking/personal-savings/cds-and-cdars.html#accordion-80f164dff7-item-0ab1e5f26f"
+  },
+  {
+    "TermAmnt": 32,
+    "TermType": "DAY",
+    "Deposit": 500,
+    "APY": "0.75%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 500,
+    "APY": "4.85%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 500,
+    "APY": "5.01%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 9,
+    "TermType": "MONTH",
+    "Deposit": 500,
+    "APY": "4.51%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 500,
+    "APY": "1.00%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 500,
+    "APY": "1.05%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 500,
+    "APY": "1.25%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 500,
+    "APY": "1.35%",
+    "Bank": "Liberty Bank",
+    "Url": "https://www.liberty-bank.com/personal/banking/certificate-of-deposit"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "3.95%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 9,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "5.05%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.85%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 1,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.40%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.50%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 2,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.10%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.20%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 4,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 5,
+    "TermType": "YEAR",
+    "Deposit": 1000,
+    "APY": "4.00%",
+    "Bank": "EverBank",
+    "Url": "https://www.everbank.com/banking/cd"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.00%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "5.00%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 18,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.50%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "4.00%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 36,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.50%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 48,
+    "TermType": "MONTH",
+    "Deposit": 0,
+    "APY": "3.50%",
+    "Bank": "Barclays",
+    "Url": "https://www.banking.barclaysus.com/online-cds.html"
+  },
+  {
+    "TermAmnt": 3,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  },
+  {
+    "TermAmnt": 6,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  },
+  {
+    "TermAmnt": 12,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  },
+  {
+    "TermAmnt": 24,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  },
+  {
+    "TermAmnt": 36,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  },
+  {
+    "TermAmnt": 48,
+    "TermType": "MONTH",
+    "Deposit": 1000,
+    "APY": "0.20%",
+    "Bank": "Axos Bank",
+    "Url": "https://www.axosbank.com/Personal/CDs"
+  }
+]
