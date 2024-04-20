@@ -167,7 +167,7 @@ function Calc() {
               onChange={(e) => {
                 setTermLength(e.target.value);
               }}
-              className="search"
+              className="search border-2 border-white"
             >
               <option value="all" className="opt">
                 Term Length
@@ -395,9 +395,7 @@ function Calc() {
               {" "}
               <hr />
             </div>
-            <div className="flex justify-center">
-              <button className="bankSite mb-5 font-bold">Calculate</button>
-            </div>
+            
           </div>
         </div>
       </div>
