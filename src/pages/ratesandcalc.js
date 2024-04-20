@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/table.css";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+
 
 function Calc() {
   
@@ -129,44 +131,49 @@ function Calc() {
             <input
               type="text"
               className="search border-2 border-[#CECECE]"
-              placeholder="Bank Name"
+              placeholder="Bank Name "
               onChange={(e) => setSearchVal(e.target.value)}
-            ></input>{" "}
+            ></input>{}
+          
+
           </span>
           {/* Sort Dropdown */}
           <span className="line">
             <select
               value={selectedSorting}
               onChange={(e) => setSelectedSorting(e.target.value)}
+              className="search border-2 border-[#CECECE] text-slate-200"
             >
-              <option value="Sort By">Default</option>
-              <option value="highestAPY">Highest APY</option>
-              <option value="shortest">Shortest Term</option>
-              <option value="longest">Longest Term</option>
-              <option value="lowestDeposit">Lowest Deposit</option>
-              <option value="highestDeposit">Highest Deposit</option>
+              <option value="Sort By" className="opt">Default</option>
+              <option value="highestAPY" className="opt">Highest APY</option>
+              <option value="shortest" className="opt">Shortest Term</option>
+              <option value="longest" className="opt">Longest Term</option>
+              <option value="lowestDeposit" className="opt">Lowest Deposit</option>
+              <option value="highestDeposit" className="opt">Highest Deposit</option>
             </select>
           </span>
           {/* Term length dropdown*/}
-          <span className="line">
+          <span className="line ">
             
             <select
               value={termLength}
               onChange={(e) => {
                 setTermLength(e.target.value);
-              }}
+              }} className="search border-2 border-[#CECECE] text-slate-200"
             >
-              <option value="all">Term Length</option>
-              <option value="short">0-12 Months</option>
-              <option value="medium">12-36 Months</option>
-              <option value="long">Beyond 36 Months</option>
+            
+                <option value="all" className="opt">Term Length</option>
+                <option value="short" className="opt">0-12 Months</option>
+                <option value="medium" className="opt">12-36 Months</option>
+                <option value="long" className="opt">36+ Months</option>
+              
             </select>
           </span>
           {/* Deposit amount input */}
           <span className="line">
             <input
               type="number"
-              className="w-auto px-2 py-0 m-0 bg-white"
+              className="search border-2 border-[#CECECE] text-slate-200"
               placeholder="Deposit Amount ($)"
               onChange={(e) => setDepositVal(e.target.value)}
             ></input>{" "}
@@ -251,20 +258,19 @@ function Calc() {
               {/* create a last row of the table with the buttons to click through the results */}
               <tr>
               
-               
                 <td>
                   {displayStart >= blockSize ? (
                     <a className="next" onClick={() => setDisplayStart(displayStart - blockSize)}>
-                      {"Previous"}
+                      {"Prev"}
                     </a>
                   ) : (
-                    <span className="next-inactive">Previous</span>
+                    <span className="next-inactive">Prev</span>
                   )}
                 </td>
                 <td></td>
                 <td>
-                  {/* this looks very complicated but basically we're checking if there are any more
-                results that need to be displayed, this is a great implimentation but for now we just
+                  {/* check if more
+                results need to be displayed, this is a great implimentation but for now we just
                 refilter the array and get its length */}
                   {displayStart + blockSize <=
                     RatesList.filter(
@@ -283,15 +289,17 @@ function Calc() {
                           depositVal === null ||
                           item.Deposit <= depositVal)
                     ).length ? (
-                    <div className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
+                      <a className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
                       {"Next"}
-                    </div>
+                    </a>
+                   
                   ) : (
-                    <span></span>
+                    <span className="next-inactive ">Next</span>
                   )}
                 </td>
                 <td></td>
               </tr>
+              
             </tbody>
           </table>
         </div>

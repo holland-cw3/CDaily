@@ -66,6 +66,9 @@ tr:last-of-type {
     border-radius: 10px;
     padding: .5vw;
     border: 1px solid white;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    font-weight: bold;
 }
 
 .next-inactive{
@@ -73,6 +76,8 @@ tr:last-of-type {
     border-radius: 10px;
     padding: .5vw;
     border: 1px solid grey;
+    padding-left: 7vw;
+    padding-right: 7vw;
 }
 
 hr {
@@ -101,7 +106,11 @@ hr {
     padding-left: 1vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    width: 15vw;
+    width: 17vw;
     border-radius: 20px;
     border-color: rgba(71, 71, 71, 0.);
+}
+
+.opt{
+    background-color: black;
 }
