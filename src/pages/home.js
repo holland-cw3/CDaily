@@ -7,8 +7,8 @@ import { TypeAnimation } from 'react-type-animation';
 
 function home() {
   // Get current URL location
+ 
 
-  // State variables for mobile view and hamburger menu
  
   return (
       <div className="home flex justify-center">

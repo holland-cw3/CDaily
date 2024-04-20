@@ -25,9 +25,20 @@ Header {
     margin-right: 1vw;
 }
 
-.underline{
+.tab:hover{
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
     text-decoration-line: underline;
-    text-decoration-color: white;
+    text-decoration-color: #7b9a6d;
+
 }
+
+.active{
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    text-decoration-line: underline;
+    text-decoration-color: #7b9a6d;
+}
+
 
 
