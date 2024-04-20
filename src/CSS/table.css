@@ -40,6 +40,9 @@ tr:not(:last-of-type){
     border-width: 1px;
 }
 
+tr:nth-child(2n){
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
 
 tr:hover:not(:last-of-type) {
@@ -57,10 +60,12 @@ tr:last-of-type {
 
 
 
+
+
 .calc{
     background-color: rgba(255,255,255,0.1);
     width:45%;
-    height: 55vh;
+    height: 45vh;
     margin-right: 3vw;
     border-radius: 10px;
     border: 1px solid white;

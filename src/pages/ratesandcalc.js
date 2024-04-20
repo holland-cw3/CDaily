@@ -126,7 +126,7 @@ function Calc() {
           <span className="line ml-10">
             <input
               type="text"
-              className="search border-2 border-[#CECECE]"
+              className="search border-2 border-[#CECECE] text-white"
               placeholder="Bank Name "
               onChange={(e) => setSearchVal(e.target.value)}
             ></input>
@@ -137,7 +137,7 @@ function Calc() {
             <select
               value={selectedSorting}
               onChange={(e) => setSelectedSorting(e.target.value)}
-              className="search border-2 border-[#CECECE] text-white text-opacity-50
+              className="search border-2 border-[#CECECE] text-opacity-40
               "
             >
               <option value="Sort By" className="opt">
@@ -184,10 +184,10 @@ function Calc() {
             </select>
           </span>
           {/* Deposit amount input */}
-          <span className="line">
+          <span className="line text-white">
             <input
               type="number"
-              className="search border-2 border-[#CECECE] text-slate-200"
+              className="search border-2 border-[#CECECE]"
               placeholder="Deposit Amount ($)"
               onChange={(e) => setDepositVal(e.target.value)}
             ></input>{" "}
