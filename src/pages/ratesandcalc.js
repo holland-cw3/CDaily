@@ -234,6 +234,12 @@ function Calc() {
                     className="mt-10"
                     for="btnControl"
                     onClick={() => {
+                      if (
+                        document.getElementById("calcDeposit").value > 0 ==
+                        false
+                      ) {
+                        if (depositVal > 0) setCalcDeposit(depositVal);
+                      }
                       setCalcTerm(item.TermAmnt);
                       setCalcTermType(item.TermType);
                       setCalcDeposit(depositVal);
@@ -243,9 +249,9 @@ function Calc() {
                         document.getElementById("calcDeposit").value > 0 ==
                         false
                       ) {
-                        setCalcDeposit(depositVal);
-                        document.getElementById("calcDeposit").value =
-                          depositVal;
+                        if (depositVal > 0)
+                          document.getElementById("calcDeposit").value =
+                            depositVal;
                       }
                       document.getElementById("calcAPY").value = item.apyNum;
                     }}
