@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/table.css";
-import { FaMagnifyingGlass } from "react-icons/fa6";
 
 
 function Calc() {
-  
+
   // Importing records data from JSON file
   const RatesList = require("../data/rates.json");
 
@@ -122,7 +121,7 @@ function Calc() {
   // display the page
   return (
     <div className="flex flex-col">
-      
+
       <div className="form text-black">
         <div className="flex flex-row justify-left userForm">
           {/* Displaying heading text */}
@@ -133,8 +132,8 @@ function Calc() {
               className="search border-2 border-[#CECECE]"
               placeholder="Bank Name "
               onChange={(e) => setSearchVal(e.target.value)}
-            ></input>{}
-          
+            ></input>{ }
+
 
           </span>
           {/* Sort Dropdown */}
@@ -154,19 +153,19 @@ function Calc() {
           </span>
           {/* Term length dropdown*/}
           <span className="line ">
-            
+
             <select
               value={termLength}
               onChange={(e) => {
                 setTermLength(e.target.value);
               }} className="search border-2 border-[#CECECE] text-slate-200"
             >
-            
-                <option value="all" className="opt">Term Length</option>
-                <option value="short" className="opt">0-12 Months</option>
-                <option value="medium" className="opt">12-36 Months</option>
-                <option value="long" className="opt">36+ Months</option>
-              
+
+              <option value="all" className="opt">Term Length</option>
+              <option value="short" className="opt">0-12 Months</option>
+              <option value="medium" className="opt">12-36 Months</option>
+              <option value="long" className="opt">36+ Months</option>
+
             </select>
           </span>
           {/* Deposit amount input */}
@@ -188,12 +187,12 @@ function Calc() {
         <div className="tableContainer mt-6 w-1/4 ml-15 mr-5">
           <table className="mb-10 table-auto">
             {/* Displaying table head with name for fields */}
-            <thead>
-                <th>Bank</th>
-                <th>Term Length</th>
-                <th>Min Deposit</th>
-                <th>APY</th>
-                <th>Bank Link</th>
+            <thead className="text-white">
+              <th>Bank</th>
+              <th>Term</th>
+              <th>Min Deposit</th>
+              <th>APY</th>
+              <th>Bank Link</th>
             </thead>
             <tbody>
               {/* map the items in the Rates List to JSX Objects so they can be displayed */}
@@ -215,8 +214,7 @@ function Calc() {
               )
                 .slice(displayStart, displayStart + blockSize)
                 .map((item) => (
-                 
-                  <tr className="mt-10" onClick={() => {
+                  <tr className="mt-10" for="btnControl" onClick={() => {
                     setCalcTerm(item.TermAmnt);
                     setCalcTermType(item.TermType);
                     setCalcDeposit(depositVal);
@@ -248,16 +246,18 @@ function Calc() {
                       <a
                         target="_blank"
                         href={item.Url != null ? item.Url.toString() : "Null"}
+                        className="underline text-blue-200"
                       >
                         Bank Site
                       </a>
                     </td>
-                    
+
                   </tr>
                 ))}
+
               {/* create a last row of the table with the buttons to click through the results */}
               <tr>
-              
+
                 <td>
                   {displayStart >= blockSize ? (
                     <a className="next" onClick={() => setDisplayStart(displayStart - blockSize)}>
@@ -289,80 +289,87 @@ function Calc() {
                           depositVal === null ||
                           item.Deposit <= depositVal)
                     ).length ? (
-                      <a className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
+                    <a className="next" onClick={() => setDisplayStart(displayStart + blockSize)}>
                       {"Next"}
                     </a>
-                   
+
                   ) : (
                     <span className="next-inactive ">Next</span>
                   )}
                 </td>
                 <td></td>
               </tr>
-              
+
             </tbody>
           </table>
         </div>
-        <div id="calculator" className="flex flex-col mt-12 calc align-center">
+        <div id="calculator" className="flex flex-col mt-5 calc align-center">
           {/* input field for term length */}
-          <div className="flex justify-center mt-5 mb-5"><h1 className="font-bold text-3xl justify-center">CD Calculator</h1></div>
-          
-          <span className="line flex flex-row ml-10 mt-">
-            Term:{" "}
-            <input
-              id="calcTerm"
-              type="number"
-              className="w-auto px-2 py-0 m-0 bg-white text-black"
-              placeholder="0 Months"
-              onChange={(e) => setCalcTerm(e.target.value)}
-            ></input>{" "}
-            <span id="calcTermType">Months</span>
-            
-          </span>
-          {/* input field for deposit amount */}
-          <span className="line flex flex-row ml-10">
-            Deposit:$
-            <input
-              id="calcDeposit"
-              type="number"
-              className="w-auto px-2 py-0 m-0 bg-white text-black"
-              placeholder="$0"
-              onChange={(e) => setCalcDeposit(e.target.value)}
-            ></input>{" "}
-          </span>
-          {/* input field for APY */}
-          <span className="line  flex flex-row ml-10">
-            APY:{" "}
-            <input
-              id="calcAPY"
-              type="number"
-              className="w-auto px-2 py-0 m-0 bg-white text-black"
-              placeholder="0.00%"
-              onChange={(e) => setCalcAPY(e.target.value)}
-            ></input>
-            {"% "}
-          </span>
-          {/* output field for extimated profit */}
-          <div className="flex justify-center"> <hr/>
-      </div>
+          <div className="flex flex-row justify-center mt-5 mb-5"><h1 className="font-bold text-3xl justify-center">CD Calculator</h1></div>
+          <div className="grid grid-cols-3 ml-5">
+            <p className="text-center font-bold -ml-7">Term</p>
+            <p className="text-center font-bold -ml-7">Deposit</p>
+            <p className="text-center font-bold -ml-7">APY</p>
+            <div className="line ">
 
-          <div className="flex justify-center text-center">
-          <span className="line text-3xl flex flex-col justify-center ml-20">
-            Est. Profit
-            <span id="estimatedEarnings">
-              {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
+              <input
+                id="calcTerm"
+                type="number"
+                className="formIn border-2"
+                placeholder="None"
+                onChange={(e) => (setCalcTerm(e.target.value))}
+              ></input>{" "}
+
+            </div>
+            <div className="line">
+              <input
+                id="calcDeposit"
+                type="text"
+                className="formIn border-2"
+                placeholder="$0.00"
+                onChange={(e) => setCalcDeposit(e.target.value)}
+              ></input>
+            </div>
+
+            <div className="line">
+              <input
+                id="calcAPY"
+                type="number"
+                className="formIn border-2"
+                placeholder="APY"
+                onChange={(e) => setCalcAPY(e.target.value)}
+              ></input>
+
+            </div>
+          </div>
+          
+          
+          {/* output field for extimated profit */}
+          <div className="flex justify-center"> <hr />
+          </div>
+<div className="flex flex-col">
+          <div className="flex justify-center text-center ml-20">
+            <span className="line text-3xl flex flex-col justify-center ml-10 mt-1">
+              Est. Profit
+              <span id="estimatedEarnings" className="text-[#7b9a6d]">
+                {"$" + new Intl.NumberFormat().format(getCalcValue().toFixed(2))}
+              </span>
             </span>
-          </span>
           </div>
-          <div className="flex justify-center"> <hr/>
-      </div>
-         <div className="flex justify-center">
-          <button className="bankSite">
-                  Get This Rate
-          </button>
+          <div className="flex justify-center"> <hr />
           </div>
+          <div className="flex justify-center">
+            <button className="bankSite mb-5 font-bold">
+             Calculate
+            </button>
+            
+          </div>
+          
+        </div>
+        <img href=""/>
         </div>
       </div>
+      
     </div>
   );
 }
