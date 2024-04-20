@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-//import "../CSS/Header.css";
+import "../Home.css";
+import bg from "../Images/bg.png"; // Importing image
+
 
 function calc() {
   // Get current URL location

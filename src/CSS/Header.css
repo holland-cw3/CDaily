@@ -1,4 +1,4 @@
-.App-header {
+Header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -14,9 +14,20 @@
 }
 
 .logo{
-    width: 30%;
-    padding-top: 1vh;
-    padding-left: .5vw;
+    width: 26%;
+   
+}
+
+.tab{
+    font-weight: bold;
+    font-size: 2.6vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.underline{
+    text-decoration-line: underline;
+    text-decoration-color: white;
 }
 
 
