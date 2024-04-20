@@ -16,11 +16,11 @@ function email() {
 
     <div className="emailsignup flex justify-center">
         <form action="https://evanmasiello.com/cdaily/signup.php" method="POST">
-        <h1 className="text-4xl mb-20 font-bold text-[#7b9a6d]">Sign-Up For Weekly Notifications</h1>
+        <h1 className="text-4xl mb-15 font-bold text-[#7b9a6d]">Sign-Up For Weekly Notifications</h1>
         <div className="flex flex-row">
-        <img src={logo} alt="logo" className="mb-7 ml-5 mr-3 logo2" />
+        <img src={logo} alt="logo" className="mb-7 ml-5 mr-3 mt-9" />
 
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center mt-10">
             <p className="text-xl">Too busy to check rates every day? No Worries! <br></br>Sign-Up for our weekly notifications to stay informed on 
               the latest rates
             </p>
