@@ -56,6 +56,9 @@ function home() {
 
     </div>
     
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5877950634442895"
+     crossorigin="anonymous"></script>
+    
         <div className="flex"> </div>
       
       <h2 className="absolute text-6xl font-bold text-[#7b9a6d] z-20 top-20"> Invest 

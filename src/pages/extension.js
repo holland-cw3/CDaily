@@ -8,7 +8,8 @@ function extension() {
   // State variables for mobile view and hamburger menu
  
   return (
-    <p>hey</p>
+    <p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5877950634442895"
+    crossorigin="anonymous"></script></p>
   );
 }
 

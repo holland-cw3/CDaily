@@ -29,6 +29,8 @@ function contact() {
           <p className="mt-8"></p>
           <button type="submit" className="submitbtn mt-8">Send</button>
         </form>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5877950634442895"
+     crossorigin="anonymous"></script>
       </div>
   );
 }
