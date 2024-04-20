@@ -4,12 +4,12 @@
     "version": "1.0",
     "description": "Displays today's CD rates",
     "icons": {
-      "16": "images/cdaily-16px.png",
-      "48": "images/cdaily-48px.png",
-      "128": "images/cdaily-128px.png"
+      "16": "src/images/cdaily-16px.png",
+      "48": "src/images/cdaily-48px.png",
+      "128": "src/images/cdaily-128px.png"
     },
     "side_panel": {
-      "default_path": "ratesandcalc.js"
+      "default_path": "src/pages/poserWeb.html"
     },
     "permissions": ["sidePanel"]
   }

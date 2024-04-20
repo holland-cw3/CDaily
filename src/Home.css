@@ -1,0 +1,62 @@
+@keyframes rotate-background {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+
+    }
+  }
+
+  @keyframes rotate-background2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+
+    }
+  }
+
+  
+  
+.bg-container{
+  filter:blur(35px);
+  border-radius: 750px;
+  width:200%;
+
+  top: 0;
+  z-index: 1;
+  animation: rotate-background 20s linear infinite;
+}
+
+ 
+.bg-container2{
+  filter:blur(35px);
+
+  top: 0;
+  position: absolute;
+  border-radius: 750px;
+  width:200%;
+  top: 0;
+  z-index: 1;
+  animation: rotate-background2 25s linear infinite;
+}
+
+
+.glass {
+  z-index: 10; /* Increase z-index to be higher than bg-container */
+  position: absolute; /* Add position absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Center the element */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
