@@ -14,6 +14,7 @@ function Header() {
       <div className="flex justify-between items-center h-full">
         <a href="/"><img src={logo} alt="logo" className="logo mt-1 mb-1 ml-5" /></a>
         <div className="flex mb-5 mr-3 text-3xl">
+          <a href="/about" className="text-white tab mt-4">About</a>
           <a href="/extension" className="text-white tab mt-4">Extension</a>
           <a href="/emails" className="text-white tab mt-4">Email</a>
           <a href="/ratesandcalc" className="text-white tab mt-4">Rates & Calculator</a>
