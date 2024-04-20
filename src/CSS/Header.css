@@ -4,7 +4,7 @@ Header {
 	left: 0;
 	width: 100%;
     height: 9vh;
-	border-bottom: 1px solid rgba(123, 154, 109, 0.3);
+	border-bottom: 1px solid #7b9a6d4d;
 	z-index: 999;
 }
 
