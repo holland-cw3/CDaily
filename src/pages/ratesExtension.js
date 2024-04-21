@@ -93,7 +93,7 @@ function Calc() {
   return (
     <div className="flex flex-col">
       <div className="form text-black">
-        <div className="justify-left userForm">
+        <div className="justify-left userFormExt">
           {/* Displaying heading text */}
           {/* Search Input Field */}
           {/* Term length dropdown*/}
@@ -101,8 +101,8 @@ function Calc() {
         </div>
       </div>
       {/* The table of rates */}
-      <div className="tableContainer mt-6 w-1/4 ml-15 mr-5">
-        <table className="mb-10 table-auto">
+      <div className="tableContainerExt mt-6 w-1/4 ml-15 mr-5">
+        <table className="mb-10 table-autoExt">
           {/* Displaying table head with name for fields */}
           <thead className="text-white">
             <th>Bank</th>
@@ -132,7 +132,7 @@ function Calc() {
               .slice(displayStart, displayStart + blockSize)
               .map((item) => (
                 <tr className="mt-10" for="btnControl">
-                  <td className="w-1/4 bankName ml-2">
+                  <td className="w-1/4 bankNameExt ml-2">
                     {item.Bank != null ? item.Bank.toString() : "Null"}
                   </td>
                   <td>
@@ -165,13 +165,13 @@ function Calc() {
               <td>
                 {displayStart >= blockSize ? (
                   <a
-                    className="next"
+                    className="nextExt"
                     onClick={() => setDisplayStart(displayStart - blockSize)}
                   >
                     {"Prev"}
                   </a>
                 ) : (
-                  <span className="next-inactive">Prev</span>
+                  <span className="next-inactiveExt">Prev</span>
                 )}
               </td>
               <td></td>
@@ -197,13 +197,13 @@ function Calc() {
                       item.Deposit <= depositVal)
                 ).length ? (
                   <a
-                    className="next"
+                    className="nextExt"
                     onClick={() => setDisplayStart(displayStart + blockSize)}
                   >
                     {"Next"}
                   </a>
                 ) : (
-                  <span className="next-inactive ">Next</span>
+                  <span className="next-inactiveExt">Next</span>
                 )}
               </td>
               <td></td>
