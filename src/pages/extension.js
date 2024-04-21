@@ -41,7 +41,10 @@ function extension() {
             While we wait for approval you can install the extension using a
             local version. Here is the file you'll need to use:{" "}
             <strong>
-              <a href="https://evanmasiello.com/cdaily/extension.zip" download>
+              <a
+                href="https://evanmasiello.com/cdaily/CDaily-extension.zip"
+                download
+              >
                 Download
               </a>
             </strong>
