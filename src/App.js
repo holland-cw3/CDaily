@@ -10,9 +10,12 @@ import RatesExtension from "./pages/ratesExtension";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 
+
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+
   return (
     <Router>
       <Header />
