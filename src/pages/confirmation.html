@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Confirmation</title>
-    <link rel="stylesheet" href="../CSS/confirmation.css">
-</head>
-<body>
+  </head>
+  <body>
+    <style>
+      .thx {
+        margin: 100px auto;
+        width: 80%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(../Images/cdaily_test_size.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: center;
+        padding: 100px 0;
+      }
+      .thx h1 {
+        color: #fff;
+        margin-bottom: 40px;
+        padding: 0;
+        font-weight: bold;
+        font-size: 45px;
+      }
+
+      .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size: 20px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+      }
+      .hero-btn:hover {
+        border: 1px solid #7b9a6d;
+        background: #7b9a6d;
+        transition: 1s;
+      }
+    </style>
     <section class="thx">
-        <h1>Thank you for signing up for CDaily's weekly notifcations</h1>
-        <a href="" class="hero-btn">Confirm Email</a>
+      <h1>Thank you for signing up for CDaily's weekly notifcations</h1>
+      <a href="" class="hero-btn">Confirm Email</a>
     </section>
-</body>
+  </body>
 </html>
