@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CSS/table.css";
+import "../CSS/tableExtension.css";
 
 function Calc() {
   // Importing records data from JSON file
@@ -93,80 +93,11 @@ function Calc() {
   return (
     <div className="flex flex-col">
       <div className="form text-black">
-        <div className="flex flex-row justify-left userForm">
+        <div className="justify-left userForm">
           {/* Displaying heading text */}
           {/* Search Input Field */}
-          <span className="line ml-10">
-            <input
-              type="text"
-              className="search border-2 border-[#CECECE] text-white"
-              placeholder="Bank Name "
-              onChange={(e) => setSearchVal(e.target.value)}
-            ></input>
-            {}
-          </span>
-          {/* Sort Dropdown */}
-          <span className="line">
-            <select
-              value={selectedSorting}
-              onChange={(e) => setSelectedSorting(e.target.value)}
-              className="search border-2 border-[#CECECE] text-opacity-40
-              "
-            >
-              <option value="Sort By" className="opt">
-                Default
-              </option>
-              <option value="highestAPY" className="opt">
-                Highest APY
-              </option>
-              <option value="shortest" className="opt">
-                Shortest Term
-              </option>
-              <option value="longest" className="opt">
-                Longest Term
-              </option>
-              <option value="lowestDeposit" className="opt">
-                Lowest Deposit
-              </option>
-              <option value="highestDeposit" className="opt">
-                Highest Deposit
-              </option>
-            </select>
-          </span>
           {/* Term length dropdown*/}
-          <span className="line ">
-            <select
-              value={termLength}
-              onChange={(e) => {
-                setTermLength(e.target.value);
-              }}
-              className="search border-2 border-white"
-            >
-              <option value="all" className="opt">
-                Term Length
-              </option>
-              <option value="short" className="opt">
-                0-12 Months
-              </option>
-              <option value="medium" className="opt">
-                12-36 Months
-              </option>
-              <option value="long" className="opt">
-                36+ Months
-              </option>
-            </select>
-          </span>
-          {/* Deposit amount input */}
-          <span className="line text-white">
-            <input
-              type="number"
-              className="search border-2 border-[#CECECE]"
-              placeholder="Deposit Amount ($)"
-              onChange={(e) => setDepositVal(e.target.value)}
-            ></input>{" "}
-          </span>
-
-          {/* this is the calculator */}
+          {/* thisis the calculator */}
         </div>
       </div>
       {/* The table of rates */}
