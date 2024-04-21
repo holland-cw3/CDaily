@@ -20,7 +20,7 @@ function extension() {
             width="504"
             height="283"
             className="mt-10 ml-10 mb-10 video"
-            src="https://www.youtube.com/embed/_3cgMofw-rc?si=uRLgcfzrt-P95Qi-"
+            src="https://www.youtube.com/embed/dguT6xt_Y1s?si=dak1ws5X3u-ndNXB"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -36,9 +36,15 @@ function extension() {
           <p className="text-white mb-6 text-lg">
             {" "}
             The CDaily Extension will be soon be available on the Chrome Web
-            Store.
-            <br></br>
-            For now you can install it using a local instillation method!
+            Store!
+            <br></br> <br></br>
+            While we wait for approval you can install the extension using a
+            local version. Here is the file you'll need to use:{" "}
+            <strong>
+              <a href="https://evanmasiello.com/cdaily/extension.zip" download>
+                Download
+              </a>
+            </strong>
           </p>
         </div>
       </div>

@@ -141,7 +141,7 @@ function Calc() {
               "
             >
               <option value="Sort By" className="opt">
-                Default
+                Sort By - Default
               </option>
               <option value="highestAPY" className="opt">
                 Highest APY
