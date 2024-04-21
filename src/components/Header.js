@@ -13,7 +13,7 @@ function Header() {
   // State variables for mobile view and hamburger menu
  if (location.pathname === '/ratesExtension'){
   return (
-    <div></div>
+    <div>hi</div>
   );
  }
   return (
