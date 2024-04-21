@@ -1,148 +1,149 @@
 .tableContainer {
-  width: 75%;
-  z-index: 100;
-  margin: auto;
-  min-width: 500px;
-  max-width: 800px;
-  overflow: auto;
-}
-
-.table-auto {
-  table-layout: auto;
-  width: 100%;
-}
-
-.userForm {
-  width: 100%;
-  margin-top: 13vh;
-}
-
-.line {
-  margin-bottom: 2vh;
-  width: 10vw;
-  margin-right: 8vw;
-}
-th {
-  width: 10vw;
-  padding-top: 1.5vh;
-  padding-bottom: 1.5vh;
-  background-color: rgba(123, 154, 109, 0.5);
-}
-
-td {
-  margin-top: 6vh;
-  text-align: center;
-  width: 11vw;
-}
-
-.bankName {
-  padding-left: 1vw;
-  text-align: left;
-}
-
-tr:not(:last-of-type) {
-  height: 5.5vh;
-  border-width: 1px;
-}
-
-tr:nth-child(2n) {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-tr:hover:not(:last-of-type) {
-  background-color: rgba(123, 154, 109, 0.5);
-}
-
-tr:last-of-type {
-  height: 10vh;
-}
-
-.active-row {
-  background-color: rgba(123, 154, 109, 0.5);
-}
-
-.calc {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 45%;
-  height: 45vh;
-  margin-right: 3vw;
-  border-radius: 10px;
-  border: 1px solid white;
-}
-
-.next {
-  background-color: rgba(123, 154, 109, 0.3);
-  border-radius: 10px;
-  padding: 0.5vw;
-  border: 1px solid white;
-  padding-left: 7vw;
-  padding-right: 7vw;
-  font-weight: bold;
-}
-
-.next:hover {
-  background-color: rgba(123, 154, 109, 0.7);
-}
-
-.next-inactive {
-  color: grey;
-  border-radius: 10px;
-  padding: 0.5vw;
-  border: 1px solid grey;
-  padding-left: 7vw;
-  padding-right: 7vw;
-  font-weight: bold;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  width: 85%;
-  align-content: center;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-.bankSite {
-  width: 85%;
-  padding: 1vw;
-  border-radius: 10px;
-  border-width: 1px;
-  border-color: white;
-  background-color: rgba(123, 154, 109, 0.7);
-}
-
-.search {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding-left: 1vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  width: 17vw;
-  border-radius: 20px;
-  border-color: rgba(71, 71, 71, 0.9);
-  color: white;
-}
-
-.opt {
-  background-color: black;
-}
-
-#btnControl {
-  display: none;
-}
-
-#btnControl:checked + label > img {
-  width: 70px;
-  height: 74px;
-}
-
-.formIn {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  width: 10vw;
-  border-color: rgba(255, 255, 255, 0.9);
-}
+    width: 75%;
+    z-index: 100;
+    margin: auto;
+    min-width: 500px;
+    max-width: 800px;
+    overflow: auto;
+  }
+  
+  .table-auto {
+    table-layout: auto;
+    width: 100%;
+  }
+  
+  .userForm {
+    width: 100%;
+    margin-top: 13vh;
+  }
+  
+  .line {
+    margin-bottom: 2vh;
+    width: 10vw;
+    margin-right: 8vw;
+  }
+  th {
+    width: 10vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    background-color: rgba(123, 154, 109, 0.5);
+  }
+  
+  td {
+    margin-top: 6vh;
+    text-align: center;
+    width: 11vw;
+  }
+  
+  .bankName {
+    padding-left: 1vw;
+    text-align: left;
+  }
+  
+  tr:not(:last-of-type) {
+    height: 5.5vh;
+    border-width: 1px;
+  }
+  
+  tr:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tr:hover:not(:last-of-type) {
+    background-color: rgba(123, 154, 109, 0.5);
+  }
+  
+  tr:last-of-type {
+    height: 10vh;
+  }
+  
+  .active-row {
+    background-color: rgba(123, 154, 109, 0.5);
+  }
+  
+  .calc {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 45%;
+    height: 45vh;
+    margin-right: 3vw;
+    border-radius: 10px;
+    border: 1px solid white;
+  }
+  
+  .next {
+    background-color: rgba(123, 154, 109, 0.3);
+    border-radius: 10px;
+    padding: 0.5vw;
+    border: 1px solid white;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    font-weight: bold;
+  }
+  
+  .next:hover {
+    background-color: rgba(123, 154, 109, 0.7);
+  }
+  
+  .next-inactive {
+    color: grey;
+    border-radius: 10px;
+    padding: 0.5vw;
+    border: 1px solid grey;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    font-weight: bold;
+  }
+  
+  hr {
+    display: block;
+    height: 1px;
+    width: 85%;
+    align-content: center;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  .bankSite {
+    width: 85%;
+    padding: 1vw;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+    background-color: rgba(123, 154, 109, 0.7);
+  }
+  
+  .search {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 17vw;
+    border-radius: 20px;
+    border-color: rgba(71, 71, 71, 0.9);
+    color: white;
+  }
+  
+  .opt {
+    background-color: black;
+  }
+  
+  #btnControl {
+    display: none;
+  }
+  
+  #btnControl:checked + label > img {
+    width: 70px;
+    height: 74px;
+  }
+  
+  .formIn {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 10vw;
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  
