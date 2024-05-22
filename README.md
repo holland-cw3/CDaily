@@ -1,4 +1,4 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LWLLgXp7gMU?si=9M7BIsHp7cAffB0l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+https://youtu.be/LWLLgXp7gMU?si=s4QHQ4P2Rosc9efE
 
 ## What it does
 CDaily is a web scraping app that scrapes Certificate of Deposit (CD) rates from 10 public banks and credit unions including but not limited to Capital One, Navy Federal Credit Union, etc. We’ve done the research and compiled a plethora of rates into one place, striving to help people with less capital make smarter investments. Users are able to freely traverse rates via a table, filtering by APY, term length, bank name, minimum deposit etc. They can also use our calculator to estimate their total profit. In addition, you can sign up for weekly notifications for the top weekly rates, as well as view them on our very own chrome extension!
