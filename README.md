@@ -1,70 +1,13 @@
-# Getting Started with Create React App
+[![Watch the video](https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg)](https://www.youtube.com/embed/<VIDEO_ID>)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## What it does
+CDaily is a web scraping app that scrapes Certificate of Deposit (CD) rates from 10 public banks and credit unions including but not limited to Capital One, Navy Federal Credit Union, etc. We’ve done the research and compiled a plethora of rates into one place, striving to help people with less capital make smarter investments. Users are able to freely traverse rates via a table, filtering by APY, term length, bank name, minimum deposit etc. They can also use our calculator to estimate their total profit. In addition, you can sign up for weekly notifications for the top weekly rates, as well as view them on our very own chrome extension!
 
-In the project directory, you can run:
+## How we built it
+CDaily is a multilanguage application using libraries such as React.js and Tailwind CSS for the front-end side of the application. On the back end, we used Node and Puppeteer.js to load chrome pages, and then uses different parsing methods (regex/querySelectors) in order the create new JSON objects: for example: { "TermAmnt": 3, "TermType": "MONTH", "Deposit": 1000, "APY": "2.75%", "Bank": "Navy Federal Credit Union", "Url": "https://www.navyfederal.org/checking-savings/savings/savings-resources/certificate-rates.html" }, We also used the Google Chrome extension developer platform to create and submit for review a working extension for the site.
 
-### `npm start`
+Finally, we used a PHP backend for subscribing to a weekly notification system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##What's next for CDaily
+What's next for CDaily? More banks! As we continue to work on the app in the future, we will be adding support for more banks, as well as streamlining the data collection process, and improving the overall UI.
