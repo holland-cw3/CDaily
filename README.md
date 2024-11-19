@@ -12,6 +12,10 @@ CDaily is a multilanguage application using libraries such as React.js and Tailw
 
 ![image](https://github.com/holland-cw3/CDaily/assets/101285025/27d99b3e-44a4-4e35-ae31-724127d7b33b)
 
+We also built a chrome extension (not currently available)!
+![Extension Screenshot](https://github.com/user-attachments/assets/b6347be4-8374-4fc6-8eee-80244bc65b29)
+
+
 
 Finally, we used a PHP backend for subscribing to a weekly notification system.
 
